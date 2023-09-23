@@ -53,6 +53,5 @@ There are 5 exercises in the first assessment which are:
 ## Collaboration
 ***
 
-Mariacquinterom worked on this.
-CristianLopera24 worked on this.
+Mariacquinterom and CristianLopera24 worked on this.
 
