@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Dashboard</title>
+    <!-- Librerías -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Estilos adicionales -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+    <div class="title-container">
+        <h1>Executive Dashboard</h1>
+    </div>
+    <div class="dashboard-container">
+        <!-- Gráfico Principal -->
+        <div class="dashboard-item">
+            <h2>Gráfico Principal</h2>
+            <div>
+                <button onclick="updateChart()">Actualizar Gráfico</button>
+            </div>
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Datos Relevantes -->
+        <div class="dashboard-item data-container">
+            <h2>Datos Relevantes</h2>
+            <div>
+                <button onclick="getLastEntry()">Última Entrada</button>
+                <span id="lastEntryResult" class="result"></span>
+            </div>
+            <div>
+                <button onclick="getMax()">Máximo</button>
+                <span id="maxResult" class="result"></span>
+            </div>
+            <div>
+                <button onclick="getMin()">Mínimo</button>
+                <span id="minResult" class="result"></span>
+            </div>
+            <div>
+                <button onclick="getAverage()">Promedio</button>
+                <span id="averageResult" class="result"></span>
+            </div>
+        </div>
+
+        <!-- Gráfico entre Fechas -->
+        <div class="dashboard-item">
+            <h2>Gráfico entre Fechas</h2>
+            <div>
+                <input type="text" id="startDate" placeholder="Fecha de inicio">
+                <input type="text" id="endDate" placeholder="Fecha de fin">
+                <button onclick="getDataBetweenDates()">Obtener Datos</button>
+            </div>
+            <canvas id="myOtherChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Gráfico entre Horas -->
+        <div class="dashboard-item">
+            <h2>Gráfico entre Horas</h2>
+            <div>
+                <input type="text" id="selectedDate" placeholder="Fecha (YYYY-MM-DD)">
+                <input type="text" id="startTime" placeholder="Hora de inicio (HH:mm)">
+                <input type="text" id="endTime" placeholder="Hora de fin (HH:mm)">
+                <button onclick="getDataBetweenHours()">Obtener Datos</button>
+            </div>
+            <canvas id="myThirdChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Gráfico con Websocket (Tiempo Real) -->
+        <div class="dashboard-item">
+            <h2>Gráfico Websocket (Tiempo Real)</h2>
+            <canvas id="myRealTimeChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="client.js"></script>
+</body>
+</html>

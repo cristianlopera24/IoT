@@ -1,0 +1,89 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-item {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #333;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-container button {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #4ca3af;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.data-container button:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-bottom: 10px;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+input, button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #666; /* Color de fondo gris para el título */
+}
+
+.title-container h1 {
+    font-size: 28px;
+    margin: 0;
+    padding: 10px 0; /* Ajusta el espaciado interno */
+    color: #fff; /* Color de texto blanco para contrastar con el fondo gris */
+    display: inline-block; /* Para que el fondo gris se ajuste al contenido */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+}
+
+.dashboard-item h2 {
+    background-color: #f2f2f2; /* Color de fondo gris más claro para los h2 */
+    padding: 8px;
+    margin-top: 0; /* Eliminar el margen superior predeterminado de los h2 */
+}
+
+* {
+    border-radius: 8px; /* Valor para redondear las esquinas */
+}
+
+/* Additional Styles for Responsive Design */
+@media only screen and (max-width: 600px) {
+    .dashboard-item {
+        flex: 1 0 100%;
+    }
+}
